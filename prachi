@@ -1,0 +1,171 @@
+import zipfile
+import os
+
+# Define the files and folders for the portfolio website
+portfolio_files = {
+    "index.html": """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Prachi Chandel - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Prachi Chandel</h1>
+        <p>Web Developer | Data Science Student</p>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a passionate web developer and data science student. I enjoy creating beautiful, dynamic websites and exploring data-driven solutions.</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Faunaa:</strong> Animal Welfare System website with Admin, NGO, and User panels.</li>
+            <li><strong>Portfolio Website:</strong> This personal portfolio you're viewing now!</li>
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: prachichandel@example.com</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/prachichandel">linkedin.com/in/prachichandel</a></p>
+    </section>
+    <footer>
+        <p>&copy; 2025 Prachi Chandel</p>
+    </footer>
+</body>
+</html>
+""",
+    "style.css": """
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+}
+header {
+    background-color: #6c63ff;
+    color: white;
+    padding: 2em;
+    text-align: center;
+}
+nav {
+    background-color: #403e8f;
+    padding: 1em;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 0 1em;
+    text-decoration: none;
+}
+section {
+    padding: 2em;
+}
+footer {
+    background-color: #6c63ff;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+a {
+    color: #403e8f;
+}
+"""
+}
+
+# Create zip file
+zip_path = "/mnt/data/Prachi_Portfolio_Website.zip"
+with zipfile.ZipFile(zip_path, "w") as zipf:
+    for filename, content in portfolio_files.items():
+        with open(filename, "w", encoding="utf-8") as f:
+            f.write(content)
+        zipf.write(filename)
+        os.remove(filename)
+
+zip_path
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Prachi Chandel - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Prachi Chandel</h1>
+        <p>Web Developer | Data Science Student</p>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a passionate web developer and data science student. I enjoy creating beautiful, dynamic websites and exploring data-driven solutions.</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Faunaa:</strong> Animal Welfare System website with Admin, NGO, and User panels.</li>
+            <li><strong>Portfolio Website:</strong> This personal portfolio you're viewing now!</li>
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: prachichandel@example.com</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/prachichandel">linkedin.com/in/prachichandel</a></p>
+    </section>
+    <footer>
+        <p>&copy; 2025 Prachi Chandel</p>
+    </footer>
+</body>
+</html>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+}
+header {
+    background-color: #6c63ff;
+    color: white;
+    padding: 2em;
+    text-align: center;
+}
+nav {
+    background-color: #403e8f;
+    padding: 1em;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 0 1em;
+    text-decoration: none;
+}
+section {
+    padding: 2em;
+}
+footer {
+    background-color: #6c63ff;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+a {
+    color: #403e8f;
+}
